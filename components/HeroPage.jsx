@@ -34,7 +34,7 @@ const heroPageData = {
       "changeType": "up",
       "delta": "+$1,547.80 today"
     },
-    "chartImage": "/images/img.svg",
+    "chartImage": "/Images/img.svg",
     "tabs": [
       {
         "id": "buy",
