@@ -1,0 +1,42 @@
+/* ── RESET  ─────────────────────────── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0B0F1A;
+  --card: #111827;
+  --card2: #141e2e;
+  --border: #1F2D45;
+  --accent: #00D09C;
+  --accent-dim: rgba(0, 208, 156, 0.12);
+  --red: #F5475B;
+  --red-dim: rgba(245, 71, 91, 0.12);
+  --text: #E4EAF4;
+  --muted: #556070;
+  --white: #ffffff;
+  --radius: 12px;
+  --radius-lg: 20px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+

@@ -1,0 +1,65 @@
+/* ── TICKER BAR ─────────────────────────── */
+.ticker-bar {
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+  padding: 10px 0;
+}
+
+.ticker-track {
+  display: flex;
+  gap: 48px;
+  width: max-content;
+  animation: ticker-scroll 32s linear infinite;
+}
+
+.ticker-bar:hover .ticker-track {
+  animation-play-state: paused;
+}
+
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.ticker-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding: 0 4px;
+}
+
+.ticker-sym {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.ticker-price {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.badge {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 5px;
+}
+
+.badge.up {
+  color: var(--accent);
+  background: var(--accent-dim);
+}
+
+.badge.down {
+  color: var(--red);
+  background: var(--red-dim);
+}

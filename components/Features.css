@@ -1,0 +1,354 @@
+/* ── FEATURES ───────────────────────────── */
+.NexusTrade-container {
+  min-height: 100vh;
+  background: var(--bg);
+  padding: 2rem;
+}
+
+@media (min-width: 768px) {
+  .NexusTrade-container {
+    padding: 3rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .NexusTrade-container {
+    padding: 1.5rem;
+  }
+}
+
+/* ── HEADER SECTION ─────────────────────────── */
+.NexusTrade-header {
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+}
+
+.NexusTrade-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.NexusTrade-title span {
+  color: var(--accent);
+  background: linear-gradient(135deg, var(--accent), #93c5fd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.NexusTrade-subtitle {
+  font-size: clamp(0.95rem, 2vw, 1.125rem);
+  color: #94a3b8;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .NexusTrade-header {
+    margin-bottom: 2rem;
+  }
+}
+
+/* ── GRID LAYOUT ─────────────────────────── */
+.NexusTrade-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  grid-auto-rows: auto;
+}
+
+@media (min-width: 768px) {
+  .NexusTrade-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .NexusTrade-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .NexusTrade-grid {
+    gap: 1rem;
+  }
+}
+
+/* ── CARD BASE STYLES ─────────────────────────── */
+.NexusTrade-card {
+  background: linear-gradient(135deg, #17293f 0%, #093b5dcb 100%);
+  border-radius: clamp(1rem, 3.5vw, 1.5rem);
+  padding: clamp(1rem, 4vw, 1rem);
+  border: 1px solid rgba(96, 165, 250, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.NexusTrade-card:hover {
+  box-shadow: 0 20px 50px rgba(96, 165, 250, 0.2);
+  transform: translateY(-8px);
+  border-color: rgba(96, 165, 250, 0.3);
+}
+
+/* ── CARD TYPOGRAPHY ─────────────────────────── */
+.card-title {
+  font-size: clamp(1.25rem, 3.5vw, 1.875rem);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.card-text {
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  color: #cbd5f5;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+
+.card-disclaimer {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-style: italic;
+  margin-top: 1rem;
+  opacity: 0.7;
+}
+
+.card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+/* ── CARD IMAGE STYLES ─────────────────────────── */
+.card-image {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 350px; 
+  margin-top: 1rem;
+}
+.card-image img{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+@media (min-width: 1024px) {
+  .card-image {
+    min-height: 250px;
+  }
+}
+.card-image-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  min-height: 200px;
+  margin-top: 1.5rem;
+}
+
+.card-image-center img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  width: clamp(120px, 80vw, 180px);
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ── CRYPTO CARD ─────────────────────────── */
+.crypto-card {
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .crypto-card {
+    grid-column: 1 / 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .crypto-card {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+  }
+}
+
+/* ── DAILY PAYOUTS CARD ─────────────────────────── */
+.daily-payouts-card {
+  background: linear-gradient(135deg, #31547d 0%, #091627 50%, #0d1b24 100%);
+}
+
+@media (min-width: 768px) {
+  .daily-payouts-card {
+    grid-column: 2 / 3;
+  }
+}
+
+@media (min-width: 1024px) {
+  .daily-payouts-card {
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+  }
+}
+
+.payouts-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+@media (min-width: 768px) {
+  .payouts-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+}
+
+.payouts-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.payouts-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 150px;
+}
+
+@media (min-width: 768px) {
+  .payouts-image {
+    width: auto;
+    min-height: 200px;
+  }
+}
+
+.payouts-image img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  width: clamp(150px, 70vw, 280px);
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ── INSTRUMENTS CARD ─────────────────────────── */
+.instruments-card {
+  text-align: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .instruments-card {
+    grid-column: 1 / 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .instruments-card {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+}
+
+/* ── MT5 CARD ─────────────────────────── */
+.mt5-card {
+  text-align: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .mt5-card {
+    grid-column: 2 / 3;
+  }
+  .card-image{
+    height: 410px;
+    width: 100%;
+    overflow: hidden;
+    img{
+      /* height: 100%; */
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .mt5-card {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+}
+
+/* ── ANIMATIONS ─────────────────────────── */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── RESPONSIVE MOBILE ─────────────────────────── */
+@media (max-width: 640px) {
+  .NexusTrade-header {
+    margin-bottom: 2rem;
+  }
+
+  .NexusTrade-grid {
+    gap: 1rem;
+  }
+
+  .NexusTrade-card {
+    padding: 1.2rem;
+  }
+
+  .card-image,
+  .card-image-center {
+    min-height: 150px;
+  }
+
+  .payouts-content {
+    gap: 1rem;
+  }
+
+  .payouts-image {
+    min-height: 120px;
+  }
+}

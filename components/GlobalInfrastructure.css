@@ -1,0 +1,370 @@
+.global-presence-wrapper {
+  width: 100%;
+  padding: 0;
+  font-family: var(--font-sans);
+  color: var(--color-text-primary);
+}
+
+/* Section Base Styles */
+.gp-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 80px 40px;
+}
+
+.gp-section-team {
+  display: flex;
+  align-items: center;
+}
+
+.gp-section-spreads {
+  border-top: 1px solid var(--color-border-tertiary);
+}
+
+/* Content Layout */
+.gp-content {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  width: 100%;
+}
+
+.gp-content-team {
+  flex-direction: row;
+}
+
+.gp-content-spreads {
+  flex-direction: row;
+}
+
+/* Team Section - Left Side */
+.gp-team-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Team Section - Right Side */
+.gp-team-right {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Spreads Section - Left Side */
+.gp-spreads-left {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Spreads Section - Right Side */
+.gp-spreads-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Image Placeholders */
+.gp-image-placeholder {
+  border-radius: 20px;
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 60px rgba(33, 150, 243, 0.15);
+  overflow: hidden;
+}
+
+.gp-globe-placeholder {
+  width: 350px;
+  height: 350px;
+}
+
+.gp-spreads-placeholder {
+  width: 350px;
+  height: 350px;
+}
+
+.gp-image-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gp-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Titles & Text */
+.gp-title {
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--color-text-primary);
+  margin: 0 0 20px 0;
+}
+
+.gp-title-main {
+  font-size: 42px;
+}
+
+.gp-title-secondary {
+  font-size: 3rem;
+}
+
+
+.gp-description {
+  font-size: 16px;
+  line-height: 1.7;
+  color:rgba(255, 255, 255, 0.687);
+  margin: 0 0 40px 0;
+  max-width: 550px;
+}
+
+/* Stats Grid */
+.gp-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 0 0 40px 0;
+}
+
+.gp-stat-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+}
+
+.gp-stat-number {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0 0 8px 0;
+}
+
+.gp-stat-label {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Buttons */
+.gp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 1.5rem;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.gp-btn-primary {
+  background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(33, 150, 243, 0.25);
+}
+
+.gp-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(33, 150, 243, 0.35);
+}
+
+.gp-btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Features List */
+.gp-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.gp-feature-item {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  background-color: rgba(167, 133, 138, 0.344);
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.gp-feature-item:hover {
+  background: black;
+  border-color: red;
+  transform: translateX(4px);
+}
+
+.gp-feature-text {
+  font-size: 15px;
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .gp-section {
+    padding: 60px 30px;
+  }
+
+  .gp-content {
+    gap: 40px;
+  }
+
+  .gp-content-team,
+  .gp-content-spreads {
+    flex-direction: column;
+  }
+
+  .gp-globe-placeholder,
+  .gp-spreads-placeholder {
+    width: 280px;
+    height: 280px;
+  }
+
+  .gp-stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .gp-title-main,
+  .gp-title-secondary {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gp-section {
+    padding: 50px 24px;
+  }
+
+  .gp-content {
+    gap: 30px;
+    flex-direction: column;
+  }
+
+  .gp-content-team,
+  .gp-content-spreads {
+    flex-direction: column;
+  }
+
+  .gp-team-left,
+  .gp-spreads-right {
+    width: 100%;
+  }
+
+  .gp-team-right,
+  .gp-spreads-left {
+    width: 100%;
+  }
+
+  .gp-globe-placeholder,
+  .gp-spreads-placeholder {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+  }
+
+  .gp-title-main,
+  .gp-title-secondary {
+    font-size: 28px;
+  }
+
+  .gp-description {
+    font-size: 1.2rem;
+
+  }
+
+  .gp-stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  .gp-stat-number {
+    font-size: 24px;
+  }
+
+  .gp-stat-label {
+    font-size: 12px;
+  }
+
+  .gp-feature-item {
+    padding: 14px 16px;
+  }
+
+  .gp-feature-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gp-section {
+    padding: 40px 16px;
+  }
+
+  .gp-globe-placeholder,
+  .gp-spreads-placeholder {
+    width: 200px;
+    height: 200px;
+  }
+
+  .gp-title-main,
+  .gp-title-secondary {
+    font-size: 24px;
+  }
+
+  .gp-description {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
+  .gp-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 30px;
+  }
+
+  .gp-stat-number {
+    font-size: 20px;
+  }
+
+  .gp-stat-label {
+    font-size: 11px;
+  }
+
+  .gp-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .gp-features-list {
+    gap: 10px;
+  }
+
+  .gp-feature-item {
+    padding: 12px 14px;
+  }
+
+  .gp-feature-text {
+    font-size: 13px;
+  }
+}

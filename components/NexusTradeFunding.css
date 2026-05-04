@@ -1,0 +1,691 @@
+
+/* ============================================
+   MAIN CONTAINER
+   ============================================ */
+
+.nt-funding-container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0f1328 100%);
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.nt-hero-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.nt-hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* Background Decoration */
+.nt-bg-decoration {
+  position: absolute;
+  top: -100px;
+  right: 0;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle at 30% 30%, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+/* ============================================
+   HERO LEFT CONTENT
+   ============================================ */
+
+.nt-hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+  z-index: 3;
+}
+
+.nt-hero-title {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.nt-hero-subtitle {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #b0b5cc;
+  max-width: 500px;
+}
+
+/* ============================================
+   FEATURES GRID
+   ============================================ */
+
+.nt-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.nt-feature-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 12px;
+  background: rgba(59, 130, 246, 0.05);
+  border: 1px solid rgba(59, 130, 246, 0.1);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.nt-feature-item:hover {
+  background: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.2);
+}
+
+.nt-feature-icon {
+  font-size: 24px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3b82f6;
+}
+
+.nt-feature-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.nt-feature-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #3b82f6;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.nt-feature-subtitle {
+  font-size: 11px;
+  color: #7080a0;
+  margin-top: 2px;
+}
+
+/* ============================================
+   FUNDING TABS
+   ============================================ */
+
+.nt-funding-tabs {
+  display: flex;
+  gap: 16px;
+  margin: 24px 0;
+  flex-wrap: wrap;
+}
+
+.nt-tab {
+  padding: 10px 20px;
+  background: transparent;
+  border: 1px solid rgba(176, 181, 204, 0.2);
+  border-radius: 24px;
+  color: #7080a0;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.nt-tab:hover {
+  border-color: rgba(59, 130, 246, 0.5);
+  color: #b0b5cc;
+}
+
+.nt-tab.active {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  border-color: transparent;
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+}
+
+.nt-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.nt-badge-blue {
+  background: rgba(59, 130, 246, 0.3);
+  color: #60a5fa;
+}
+
+.nt-badge-gray {
+  background: rgba(107, 114, 128, 0.3);
+  color: #d1d5db;
+}
+
+/* ============================================
+   PRICING CARDS
+   ============================================ */
+
+.nt-pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.nt-pricing-card {
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(139, 54, 70, 0.3) 0%, rgba(139, 54, 70, 0.1) 100%);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.nt-pricing-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.nt-pricing-card:hover {
+  border-color: rgba(239, 68, 68, 0.4);
+  transform: translateY(-2px);
+}
+
+.nt-pricing-card.selected {
+  background: linear-gradient(135deg, rgba(139, 54, 70, 0.5) 0%, rgba(139, 54, 70, 0.2) 100%);
+  border-color: rgba(239, 68, 68, 0.6);
+}
+
+.nt-card-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  background: #ef4444;
+  color: #ffffff;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.nt-card-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.nt-card-features {
+  list-style: none;
+}
+
+.nt-card-features li {
+  font-size: 12px;
+  color: #b0b5cc;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nt-checkmark {
+  color: #06b6d4;
+  font-weight: bold;
+}
+
+/* ============================================
+   HERO RIGHT CONTENT
+   ============================================ */
+
+.nt-hero-right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(29, 78, 216, 0.05) 100%);
+  border: 1px solid rgba(59, 130, 246, 0.1);
+  border-radius: 16px;
+}
+
+/* ============================================
+   ACCOUNT SECTION
+   ============================================ */
+
+.nt-account-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.nt-section-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #7080a0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nt-size-buttons {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.nt-size-btn {
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nt-size-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+}
+
+.nt-size-btn.active {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.4);
+}
+
+/* ============================================
+   DETAILS TABLE
+   ============================================ */
+
+.nt-details-table {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid rgba(59, 130, 246, 0.1);
+  border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+.nt-details-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+  font-size: 12px;
+  font-weight: 500;
+  color: #7080a0;
+}
+
+.nt-funded-label {
+  text-align: right;
+  color: #10b981;
+  font-weight: 600;
+}
+
+.nt-detail-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.05);
+  align-items: center;
+}
+
+.nt-detail-row:last-child {
+  border-bottom: none;
+}
+
+.nt-detail-label {
+  font-size: 12px;
+  color: #b0b5cc;
+  font-weight: 500;
+}
+
+.nt-detail-value {
+  font-size: 12px;
+  color: #ffffff;
+  text-align: right;
+  font-weight: 600;
+}
+
+/* ============================================
+   PRICING SECTION
+   ============================================ */
+
+.nt-pricing-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 16px;
+}
+
+.nt-price-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.nt-price-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #7080a0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.nt-price-amount {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.nt-original-price {
+  font-size: 12px;
+  color: #7080a0;
+  text-decoration: line-through;
+}
+
+.nt-final-price {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.nt-cta-button {
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+}
+
+.nt-cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(59, 130, 246, 0.4);
+}
+
+.nt-footer-link {
+  text-align: center;
+}
+
+.nt-footer-link a {
+  font-size: 11px;
+  color: #0891b2;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nt-footer-link a:hover {
+  color: #06b6d4;
+}
+
+/* ============================================
+   BOTTOM SECTION
+   ============================================ */
+
+.nt-bottom-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px;
+  border-top: 1px solid rgba(59, 130, 246, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+}
+
+.nt-disclaimer {
+  font-size: 12px;
+  color: #7080a0;
+  line-height: 1.5;
+}
+
+.nt-payment-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.nt-payment-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #b0b5cc;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.nt-payment-methods {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nt-payment-method {
+  width: 36px;
+  height: 36px;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nt-payment-method:hover {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.4);
+  transform: translateY(-2px);
+}
+
+.nt-payment-icon {
+  font-size: 18px;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .nt-hero-section {
+    padding: 40px 30px;
+  }
+
+  .nt-hero-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .nt-hero-title {
+    font-size: 36px;
+  }
+
+  .nt-pricing-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .nt-hero-section {
+    padding: 30px 20px;
+  }
+
+  .nt-hero-title {
+    font-size: 28px;
+  }
+
+  .nt-hero-subtitle {
+    font-size: 13px;
+  }
+
+  .nt-features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nt-funding-tabs {
+    flex-direction: column;
+  }
+
+  .nt-tab {
+    width: 100%;
+  }
+
+  .nt-pricing-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .nt-hero-right {
+    padding: 16px;
+  }
+
+  .nt-details-header,
+  .nt-detail-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .nt-price-row {
+    grid-template-columns: 1fr;
+    text-align: right;
+  }
+
+  .nt-bottom-section {
+    padding: 30px 20px;
+  }
+
+  .nt-payment-methods {
+    gap: 8px;
+  }
+
+  .nt-payment-method {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nt-hero-section {
+    padding: 20px 16px;
+  }
+
+  .nt-hero-title {
+    font-size: 24px;
+  }
+
+  .nt-hero-subtitle {
+    font-size: 12px;
+  }
+
+  .nt-features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nt-feature-item {
+    padding: 10px;
+  }
+
+  .nt-feature-icon {
+    min-width: 32px;
+  }
+
+  .nt-tab {
+    padding: 8px 12px;
+    font-size: 11px;
+  }
+
+  .nt-pricing-card {
+    padding: 16px;
+  }
+
+  .nt-card-title {
+    font-size: 14px;
+  }
+
+  .nt-card-features li {
+    font-size: 11px;
+  }
+
+  .nt-hero-right {
+    padding: 12px;
+    gap: 16px;
+  }
+
+  .nt-size-btn {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  .nt-final-price {
+    font-size: 24px;
+  }
+
+  .nt-cta-button {
+    padding: 12px 20px;
+    font-size: 13px;
+  }
+
+  .nt-bottom-section {
+    padding: 20px 16px;
+  }
+
+  .nt-payment-method {
+    width: 28px;
+    height: 28px;
+  }
+
+  .nt-payment-icon {
+    font-size: 14px;
+  }
+}
