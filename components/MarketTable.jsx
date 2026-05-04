@@ -13,7 +13,7 @@ const marketData = [
     changeType: "up",
     marketCap: "$1.33T",
     volume: "$28.4B",
-    trend: "/images/market_up.svg",
+    trend: "/Images/market_up.svg",
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ const marketData = [
     changeType: "up",
     marketCap: "$421.5B",
     volume: "$14.2B",
-    trend: "/images/market_up.svg",
+    trend: "/Images/market_up.svg",
   },
   {
     id: 3,
@@ -41,7 +41,7 @@ const marketData = [
     changeType: "down",
     marketCap: "$79.2B",
     volume: "$3.8B",
-    trend: "/images/market_down.svg",
+    trend: "/Images/market_down.svg",
   },
 ];
 export default function MarketTable() {

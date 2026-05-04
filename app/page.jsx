@@ -13,24 +13,24 @@ export default function Home() {
   return (
     <>
       {/* banner-block */}
-      {/* <Banner /> */}
+      <Banner />
       {/* NAVBAR */}
-      {/* <Navbar /> */}
+      <Navbar />
       {/* HERO */}
       <HeroPage />
       {/* FEATURES */}
-      {/* <Features /> */}
+      <Features />
       {/* stats-strip */}
-      {/* <States /> */}
+      <States />
       {/* How it Works */}
-      {/* <Howitwork /> */}
+      <Howitwork />
       {/* GlobalPresence page */}
-      {/* <GlobalPresence /> */}
+      <GlobalPresence />
 
-      {/* <NexusTradeFunding /> */}
+      <NexusTradeFunding />
 
       {/* MARKETS TABLE */}
-      {/* <MarketTable /> */}
+      <MarketTable />
     </>
   );
 }

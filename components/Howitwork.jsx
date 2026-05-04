@@ -63,7 +63,7 @@ const SharkFundedUI = () => {
             </div>
             <div className="howWorkImsges">
               <Image
-                src="/images/step1.webp"
+                src="/Images/step1.webp"
                 alt="step1"
                 fill
                 className="StepsImages"
@@ -87,7 +87,7 @@ const SharkFundedUI = () => {
           {/* Account Details */}
           <div className="account-details">
             <Image
-              src="/images/step2.webp"
+              src="/Images/step2.webp"
               alt="step1"
               width={300}
               height={200}
@@ -112,7 +112,7 @@ const SharkFundedUI = () => {
             <div className="bitcoin-icon-container">
               <div className="bitcoin-icon">
                 <Image
-                  src="/images/step3.webp"
+                  src="/Images/step3.webp"
                   alt="step1"
                   width={300}
                   height={200}

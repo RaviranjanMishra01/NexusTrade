@@ -55,7 +55,7 @@ const GlobalPresence = () => {
             <div className="gp-image-placeholder gp-globe-placeholder">
               <div className="gp-image-wrapper">
                 <Image
-                  src="/images/GlobalInfrastructure02.webp"
+                  src="/Images/GlobalInfrastructure02.webp"
                   alt="Global Team"
                   width={300}
                   height={200}
@@ -105,7 +105,7 @@ const GlobalPresence = () => {
             <div className="gp-image-placeholder gp-spreads-placeholder">
               <div className="gp-image-wrapper">
                 <Image
-                  src="/images/GlobalInfrastructure01.webp"
+                  src="/Images/GlobalInfrastructure01.webp"
                   alt="Trading Spreads"
                   width={300}
                   height={200}
