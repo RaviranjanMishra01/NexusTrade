@@ -33,7 +33,7 @@ const cardsData = [
     id: 4,
     type: "mt5-card",
     title: "MT5 Platform",
-    image: "/images/mt5.png",
+    image: "/Images/mt5.png",
     imageAlt: "MT5",
     layout: "image-center",
   },
