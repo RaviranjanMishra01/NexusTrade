@@ -8,6 +8,8 @@ import States from "../components/States";
 import Howitwork from "../components/Howitwork";
 import GlobalPresence from "../components/GlobalInfrastructure";
 import NexusTradeFunding from "../components/NexusTradeFunding";
+import NextTradeFooter from "../components/NextTradeFooter"
+import NextQuestions from "../components/NextQuestions.jsx"
 
 export default function Home() {
   return (
@@ -28,9 +30,11 @@ export default function Home() {
       <GlobalPresence />
 
       <NexusTradeFunding />
+      <NextQuestions />
 
       {/* MARKETS TABLE */}
-      <MarketTable />
+      {/* <MarketTable /> */}
+      <NextTradeFooter />
     </>
   );
 }
